@@ -1,9 +1,11 @@
 package caraccessoriesTest;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import org.junit.Assert;
 
 import caraccessories.User;
+import caraccessories.UserFun;
 import caraccessories.firstclass;
 import caraccessories.mydata;
 import io.cucumber.java.en.Given;
@@ -17,7 +19,8 @@ import java.util.logging.Logger;
 
 public class userLoginTest {
      private User user = new User();
-	 private static List<User> userList = mydata.listUsers(); 
+     private static UserFun userfun = new UserFun();
+//	 private static List<User> userList = mydata.listUsers(); 
 	 private String email;
 	 private String password;
 	 private boolean b;
@@ -32,15 +35,21 @@ public class userLoginTest {
 	}
 	@When("the user try to login with email {string} and password {string}")
 	public void the_user_try_to_login_with_email_and_password(String string, String string2) {
-	     b = user.login(string ,string2,userList);
+	     b = userfun.login(string ,string2);
 	}
 	
 	@Then("the user will login")
 	public void the_user_will_login() {
+		assertTrue(UserFun.getflag4()==true);
+
+//		assertTrue(b);
 		Assert.assertTrue(b);
 	}
 	@Then("the user will not login")
 	public void the_user_will_not_login() {
+//		assertFalse(b);
+		assertTrue(UserFun.getflag4()==false);
+
 		Assert.assertFalse(b);
         logger.log(Level.INFO, "try again please\\n");
 

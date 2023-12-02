@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Assert;
 
 import caraccessories.Product;
+import caraccessories.ProductFun;
 import caraccessories.User;
 import caraccessories.mydata;
 import io.cucumber.java.en.Given;
@@ -16,29 +17,40 @@ import java.util.*;
 public class deleteproductTest {
 	
 	private Product product = new Product();
-	private static List<Product> productList = mydata.listproducts();
+    private static ProductFun productfun = new ProductFun();
+
+    private static List<Product> result;
 	private int productid;
-	 private boolean l;
+	 private boolean d;
 	
 	@When("delete a product with productid {int}")
 	public void delete_a_product_with_productid(Integer int1) {
-		l=product.deleteproduct(int1, productList);
+    d= productfun.deleteproduct(int1);
 
 	}
 	@Then("I will found the product with productid as {int}")
 	public void i_will_found_the_product_with_productid_as(Integer int1) {
-	    assertTrue(l);
+		//true.. delete 
+		assertTrue(ProductFun.getflag3()==true);
+
+	   //  assertFalse(productfun.getproductid1(int1)!=null);		
+		 assertTrue(d);
+		 productfun.printProductList();
+
 
 	}
 	
 	@When("I try to delte a product with productid {int}")
 	public void i_try_to_delte_a_product_with_productid(Integer int1) {
-		l=product.deleteproduct(int1, productList);
+	    d= productfun.deleteproduct(int1);
 
 	}
-	@Then("I can't found the product with productid")
-	public void i_can_t_found_the_product_with_productid() {
-		assertFalse(l);
+	@Then("I can't found the product with  a productid {int}")
+	public void i_can_t_found_the_product_with_a_productid(Integer int1) {
+		assertTrue(ProductFun.getflag2()==false);
+
+		//assertFalse(productfun.getproductid1(int1)!=null);		
+		assertFalse(d);
 
 	}
 
