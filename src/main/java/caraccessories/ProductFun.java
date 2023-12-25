@@ -64,20 +64,7 @@ public class ProductFun {
 
 		
 	}
-	public static void add( int productid ,String productname, String productdescription, String productcategorie, int productprice,
-			String productimage, String productavailability) {
 		
-		Product product= new Product() ;
-		product.setProductid(productid);
-		product.setProductname(productname);
-		product.setProductdescription(productdescription);
-		product.setProductcategorie(productcategorie);
-		product.setProductprice(productprice);
-		product.setProductimage(productimage);
-		product.setProductavailability(productavailability);
-	}
-	
-	
 	public List<Product> addproduct(int productid , String productname, String productdescription, String productcategorie, int productprice,
 	String productimage, String productavailability){
 		
@@ -101,34 +88,34 @@ public class ProductFun {
 	}
 	
 	
-	public static Product getproductid1(int productid) {
-		
-		for (Product product : productList) {
-		
-			if ( productid == product.getProductid()) {
-			
-			return product;
-
-		}
+//	public static Product getproductid1(int productid) {
+//		
+//		for (Product product : productList) {
+//		
+//			if ( productid == product.getProductid()) {
+//			
+//			return product;
+//
+//		}
+//	
+//		}
+//		return null;
+//	}
 	
-		}
-		return null;
-	}
 	
-	
-	public String getproductname1(int productid) {
-		String productname;
-		for (Product product : productList) {
-		
-			if ( productid == product.getProductid()) {
-			productname=product.getProductname();
-			return productname;
-			}
-		}
-		System.out.println("This Product already does not exists.");
-		return null;
-	}
-	
+//	public String getproductname1(int productid) {
+//		String productname;
+//		for (Product product : productList) {
+//		
+//			if ( productid == product.getProductid()) {
+//			productname=product.getProductname();
+//			return productname;
+//			}
+//		}
+//		System.out.println("This Product already does not exists.");
+//		return null;
+//	}
+//	
 	
 	public void printProductList() {
         System.out.println("Product List:");
@@ -196,18 +183,18 @@ public static Product getproductcategiore1(String productcategiore) {
         return matchingProducts.isEmpty() ? null : matchingProducts;
     }
 	
-	public static Product getproductname1(String productname) {
-		
-		for (Product product : productList) {
-		
-			if ( productname.equals(product.getProductname())) {
-			
-			return product;
-
-		}
-		}
-		return null;
-	}
+//	public static Product getproductname1(String productname) {
+//		
+//		for (Product product : productList) {
+//		
+//			if ( productname.equals(product.getProductname())) {
+//			
+//			return product;
+//
+//		}
+//		}
+//		return null;
+//	}
 			
 		
 	public List<Product> updateProduct(int productid, String newProductName, String newProductDescription, String newProductCategorie,
