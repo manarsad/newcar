@@ -462,7 +462,6 @@ public class firstclass {
 				                System.out.println("User not found for update.\n");
 				                continue;
 				            }
-			        	
 			        }
 			        else if (input2 == 4 )
 			        {
