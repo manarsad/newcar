@@ -183,18 +183,18 @@ public static Product getproductcategiore1(String productcategiore) {
         return matchingProducts.isEmpty() ? null : matchingProducts;
     }
 	
-//	public static Product getproductname1(String productname) {
-//		
-//		for (Product product : productList) {
-//		
-//			if ( productname.equals(product.getProductname())) {
-//			
-//			return product;
-//
-//		}
-//		}
-//		return null;
-//	}
+	public static String getproductname1(int productid) {
+		
+		for (Product product : productList) {
+		
+			if ( productid==product.getProductid()) {
+				String productname = product.getProductname();
+			
+			return productname;
+		}
+		}
+		return null;
+	}
 			
 		
 	public List<Product> updateProduct(int productid, String newProductName, String newProductDescription, String newProductCategorie,
@@ -249,20 +249,20 @@ public static Product getproductcategiore1(String productcategiore) {
 	    return null;
 	}
 	
-//	public boolean getorderlist1() {
-//		
-//		for (Product product : orderList) {
-//			if ( orderList==null) {
-//		        System.out.println(" order list is empty ");
-//			return false;
-//		}
-//		}
-//		return true;
-//	}
+	public boolean getorderlist1() {
+		
+		for (Product product : orderList) {
+			if ( orderList==null) {
+		        System.out.println(" order list is empty ");
+			return false;
+		}
+		}
+		return true;
+	}
 	public static boolean isOrderListEmpty() {
         return orderList.isEmpty();
     }
-	
+
 	
 	
 	

@@ -40,12 +40,6 @@ public class firstclass {
     private static Product result = new Product();
     
     private static boolean e=true ;
-
-    
-//	 private static List<User> userList = mydata.listUsers(); 
-//	 private static List<Product> productList = mydata.listproducts(); 
-
-
 	static Logger logger = Logger.getLogger(firstclass.class.getName());
     static Scanner scanner = new Scanner(System.in);
     
