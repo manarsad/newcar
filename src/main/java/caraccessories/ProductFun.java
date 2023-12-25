@@ -103,19 +103,19 @@ public class ProductFun {
 //	}
 	
 	
-//	public String getproductname1(int productid) {
-//		String productname;
-//		for (Product product : productList) {
-//		
-//			if ( productid == product.getProductid()) {
-//			productname=product.getProductname();
-//			return productname;
-//			}
-//		}
-//		System.out.println("This Product already does not exists.");
-//		return null;
-//	}
-//	
+	public String getproductname1(int productid) {
+		String productname;
+		for (Product product : productList) {
+		
+			if ( productid == product.getProductid()) {
+			productname=product.getProductname();
+			return productname;
+			}
+		}
+		System.out.println("This Product already does not exists.");
+		return null;
+	}
+	
 	
 	public void printProductList() {
         System.out.println("Product List:");
@@ -182,20 +182,6 @@ public static Product getproductcategiore1(String productcategiore) {
 
         return matchingProducts.isEmpty() ? null : matchingProducts;
     }
-	
-	public static String getproductname1(int productid) {
-		
-		for (Product product : productList) {
-		
-			if ( productid==product.getProductid()) {
-				String productname = product.getProductname();
-			
-			return productname;
-		}
-		}
-		return null;
-	}
-			
 		
 	public List<Product> updateProduct(int productid, String newProductName, String newProductDescription, String newProductCategorie,
             int newProductPrice, String newProductImage, String newProductAvailability ,int oldproductid) {
