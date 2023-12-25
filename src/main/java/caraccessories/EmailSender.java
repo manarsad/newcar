@@ -23,17 +23,11 @@ public class EmailSender {
 	   public static void sendEmail(String from, String to, String subject, String messageText) {
 	        // Set up the properties for the email server
 	        Properties properties = System.getProperties();
-//	        properties.put("mail.smtp.host", "smtp.gmail.com");
-//	        properties.put("mail.smtp.port", "587");
-//	        properties.put("mail.smtp.auth", "true");
-//	        properties.put("mail.smtp.starttls.enable", "true");
-//	        
 	        properties.put("mail.smtp.host", "smtp.gmail.com");
 	        properties.put("mail.smtp.port", "587");
 	        properties.put("mail.smtp.auth", "true");
 	        properties.put("mail.smtp.starttls.enable", "true");
-	        properties.put("mail.smtp.ssl.protocols", "TLSv1.2");
-	        properties.put("mail.smtp.ssl.ciphersuites", "TLS_AES_128_GCM_SHA256");
+
 
 	        // Create a session with the properties	        
 	        Session session = Session.getInstance(properties, new Authenticator() {

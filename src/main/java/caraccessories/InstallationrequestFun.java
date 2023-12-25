@@ -40,16 +40,10 @@ public class InstallationrequestFun {
 	
         
 	public List<Installationrequest> request( int requestid  , String reqinstallername,int productid ,String reqproductname, String reqcostumername , String day , String month , int hour ) {
-	    // Check if the product exists in the productList
-		    // If the product exists, add it to the orderList
-		    //for (Installationrequest request : requestList) {
-		      //  if (request.getRequestid() == productid) {
 		            requestList.add(new Installationrequest(requestid,reqinstallername,productid ,reqproductname,reqcostumername ,day , month ,hour));
 			        System.out.println("done .. add it to installation Request list ");
 			        sendEmailConfirmation(reqcostumername,reqproductname);
 			        flag1=true;
-		      //  }
-		//    }
             return requestList;
 
 	}
