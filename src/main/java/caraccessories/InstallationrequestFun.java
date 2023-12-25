@@ -60,19 +60,19 @@ public class InstallationrequestFun {
         }
     }
 	
-	public static void sendEmailConfirmation(String costumername ,String productname) {
-		String from = "s12027821@stu.najah.edu";
-		String to = "s12011151@stu.najah.edu";
-		
-		String subject = "NewInstallation Request";
-		String messageText = " Dear Installer, \n \n You have a new installation request. \n \n "
-				+ "Customer:"+ costumername + "\n"
-				+" Product :" + productname +"$" + "\n \n" 
-				+ "Please check your dashboard for more details.";
-		isSented=true; 
-		EmailSender.sendEmail(from, to, subject, messageText);
-		
-				}
+	
+    public static void sendEmailConfirmation(String customerName, String productName) {
+        String from = "s12027821@stu.najah.edu";
+        String to = "s12011151@stu.najah.edu";
+
+        String subject = "New Installation Request";
+        String messageText = "Dear Installer, \n \n You have a new installation request. \n \n "
+                + "Customer:" + customerName + "\n"
+                + " Product :" + productName + "$" + "\n \n"
+                + "Please check your dashboard for more details.";
+      //  isSented = true;
+        EmailSender.sendEmail(from, to, subject, messageText);
+    }
 	
 	
 
