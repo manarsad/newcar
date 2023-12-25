@@ -4,15 +4,15 @@
   <artifactId>caraccessories</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-    <properties>
-        <maven.compiler.source>19.0.2</maven.compiler.source>
-        <maven.compiler.target>19.0.2</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  <properties>
+    <!-- Use a supported Java version, for example, Java 11 -->
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-      
-        <sonar.organization>manarsad</sonar.organization>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-    </properties>
+    <sonar.organization>manarsad</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+</properties>
     <build>
         <plugins>
             <plugin>
