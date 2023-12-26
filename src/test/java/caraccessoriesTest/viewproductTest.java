@@ -3,12 +3,18 @@ package caraccessoriesTest;
 import static org.junit.Assert.assertTrue;
 
 import caraccessories.ProductFun;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class viewproductTest {
 	
     private static ProductFun productfun = new ProductFun();
+    @Given("the customer is already logged in")
+    public void the_customer_is_already_logged_in() {
+		System.out.println("..");
+
+    }
 
 	@When("the customer choose view product")
 	public void the_customer_choose_view_product() {
