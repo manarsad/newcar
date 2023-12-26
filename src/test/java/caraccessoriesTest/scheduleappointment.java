@@ -12,6 +12,7 @@ import org.junit.Assert;
 
 import caraccessories.Installer;
 import caraccessories.InstallerFun;
+import caraccessories.ProductFun;
 import caraccessories.User;
 import caraccessories.UserFun;
 import io.cucumber.java.en.Given;
@@ -36,7 +37,7 @@ public class scheduleappointment {
 	}
 	@Then("I will add the installer appointment with email {string}")
 	public void i_will_add_the_installer_appointment_with_email(String string) {
-		assertTrue(InstallerFun.getflag1()==true);
+	    assertEquals(true, InstallerFun.getflag1());
 
 		 //assertTrue(installerfun.getinstalleremail1(string)!=null);
 		 installerfun.printInstallerList();
