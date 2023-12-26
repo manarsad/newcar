@@ -8,7 +8,6 @@ import caraccessories.Product;
 import caraccessories.ProductFun;
 import caraccessories.User;
 import caraccessories.UserFun;
-import caraccessories.mydata;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -35,11 +34,12 @@ public class addproductTest {
 	 private boolean l;
 
 	
-	@Given("the admin is already logged in")
-	public void the_admin_is_already_logged_in() {
-		System.out.println("..");
+	 @Given("the admin is already logged in with email {string} and password {string}")
+	 public void the_admin_is_already_logged_in_with_email_and_password(String string, String string2) {
+		 UserFun.gotopage(string, string2);
+			System.out.println("..");
 
-	}
+	 }
 	
 	@When("add a product with productid {int} and  productname {string} and productdescription {string} and productcategorie {string} and productprice {int} and productimage {string} and productavailability {string}")
 	public void add_a_product_with_productid_and_productname_and_productdescription_and_productcategorie_and_productprice_and_productimage_and_productavailability(Integer int1, String string, String string2, String string3, Integer int2, String string4, String string5) {
