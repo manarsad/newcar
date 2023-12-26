@@ -12,6 +12,10 @@ public class UserFun {
 	private static boolean flag3 = false;
 	private static boolean flag4 = false;
 	private static boolean flag5 = false;
+	private static String ADMIN = "ADMIN";
+	private static String CUSTOMER = "CUSTOMER";
+	private static String INSTALLER = "INSTALLER";
+
 	public static boolean getflag1() {
 		return flag1;
 	}
@@ -30,12 +34,12 @@ public class UserFun {
 
 	
 	static {
-		User user1 = new User("manar","manar@gmail.com", "manar","ADMIN",12345,"jenin");
-		User user2 = new User("sama","sama@gmail.com", "sama","CUSTOMER", 12345,"jenin");
-		User user3 = new User("ali","ali@gmail.com", "ali","INSTALLER", 12345,"nablus");
-		User user4 = new User("user4","user4@gmail.com", "user4","INSTALLER", 12345,"nablus");
-		User user5 = new User("user5","user5@gmail.com", "user5","ADMIN", 12345,"nablus");
-		User user6 = new User("user6","user6@gmail.com", "user6","CUSTOMER", 12345,"Nablus");
+		User user1 = new User("manar","manar@gmail.com", "manar",ADMIN,12345,"jenin");
+		User user2 = new User("sama","sama@gmail.com", "sama",CUSTOMER, 12345,"jenin");
+		User user3 = new User("ali","ali@gmail.com", "ali",INSTALLER, 12345,"nablus");
+		User user4 = new User("user4","user4@gmail.com", "user4",INSTALLER, 12345,"Ramallah");
+		User user5 = new User("user5","user5@gmail.com", "user5",ADMIN, 12345,"Tubas");
+		User user6 = new User("user6","user6@gmail.com", "user6",CUSTOMER, 12345,"nablus");
 		userList.add(user1);
 		userList.add(user2);
 		userList.add(user3);
@@ -61,9 +65,9 @@ public class UserFun {
 	public static int gotopage(String email, String password) {
 		for (User user : userList) {
 		    if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
-		        if ("ADMIN".equals(user.getUserlevel())) {
+		        if (ADMIN.equals(user.getUserlevel())) {
 		            return 1;
-		        } else if ("CUSTOMER".equals(user.getUserlevel())) {
+		        } else if (CUSTOMER.equals(user.getUserlevel())) {
 		            return 2;
 		        } else {
 		            return 3;
