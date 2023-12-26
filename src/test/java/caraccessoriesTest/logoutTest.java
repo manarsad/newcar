@@ -12,7 +12,6 @@ import caraccessories.ProductFun;
 import caraccessories.User;
 import caraccessories.UserFun;
 import caraccessories.firstclass;
-import caraccessories.mydata;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -28,7 +27,6 @@ public class logoutTest {
 @When("the user try to logout")
 public void the_user_try_to_logout() {
 	userfun.logout();
-
 }
 @Then("the user will logout")
 public void the_user_will_logout() {
