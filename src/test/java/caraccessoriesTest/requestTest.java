@@ -1,5 +1,6 @@
 package caraccessoriesTest;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
@@ -29,7 +30,9 @@ public class requestTest {
 	}
 	@Then("the request installation it will be add")
 	public void the_request_installation_it_will_be_add() {
-		assertTrue(InstallationrequestFun.getflag1()==true);
+	    assertEquals(true,InstallationrequestFun.getflag1());
+
+		//assertTrue(InstallationrequestFun.getflag1()==true);
 
 		requestfun.printRequestList();
 
