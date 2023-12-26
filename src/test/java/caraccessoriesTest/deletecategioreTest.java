@@ -7,6 +7,8 @@ import java.util.List;
 
 import caraccessories.Product;
 import caraccessories.ProductFun;
+import caraccessories.UserFun;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -18,6 +20,10 @@ public class deletecategioreTest {
 	private int productid;
 	 private boolean d;
 	 
+	 @Given("the admin is already logged in")
+	 public void the_admin_is_already_logged_in() {
+			System.out.println("..");
+	 }
 	 @When("delete a product with productcategiore {string}")
 	 public void delete_a_product_with_productcategiore(String string) {
 		    d= productfun.deletecategorie(string);
