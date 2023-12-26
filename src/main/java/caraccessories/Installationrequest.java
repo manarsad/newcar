@@ -10,7 +10,6 @@ public class Installationrequest {
 	private String day ;
 	private String month;
 	private int hour;
-
 	public Installationrequest( int requestid  , String reqinstallername,int productid ,String reqproductname, String reqcostumername , String day , String month , int hour) {
 		this.requestid=requestid;
 		this.reqinstallername= reqinstallername;

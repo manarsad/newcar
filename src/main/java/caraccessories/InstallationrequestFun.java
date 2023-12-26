@@ -14,7 +14,6 @@ public class InstallationrequestFun {
 	public static boolean getflag1() {
 		return flag1;
 	}	
-
 	static {
 		Installationrequest request1 = new Installationrequest(1,"ali",1,"vehicle engine", "sama","Sunday","14-April",12);
 		Installationrequest request2 = new Installationrequest(2,"ali",2,"vehicl door", "sama", "Monday","14-April",2);

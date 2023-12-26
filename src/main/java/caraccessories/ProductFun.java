@@ -213,7 +213,6 @@ public class ProductFun {
 
 	
 	
-	
 	public static void printOrderList() {
         logger.info("Order List:");
         for (Product product : orderList) {

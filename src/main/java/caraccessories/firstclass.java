@@ -439,7 +439,6 @@ public class firstclass {
 				  	       String email1 = scanner.next();
 				  	       logger.log(Level.INFO, "Enter your new password \\n");
 				  	       String password1= scanner.next();
-
 				  	       logger.log(Level.INFO, "Enter your new phone \\n");
 				 	       int userphone = scanner.nextInt();
 				 	       logger.log(Level.INFO, "Enter your new address \\n");

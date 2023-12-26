@@ -12,7 +12,6 @@ public class UserFun {
 	private static boolean flag3 = false;
 	private static boolean flag4 = false;
 	private static boolean flag5 = false;
-
 	public static boolean getflag1() {
 		return flag1;
 	}

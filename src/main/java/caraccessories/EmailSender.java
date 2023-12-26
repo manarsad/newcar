@@ -15,7 +15,6 @@ import javax.mail.internet.MimeMessage;
 
 public class EmailSender {
     private EmailSender() {
-    	
     }
 	static Logger logger = Logger.getLogger(EmailSender.class.getName());
 

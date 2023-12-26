@@ -11,7 +11,6 @@ public class Installer {
 	private String day ;
 	private String month;
 	private int hour;
-	
 	public String getInstallername() {
 		return installername;
 	}
