@@ -1,10 +1,12 @@
 package caraccessoriesTest;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
+import caraccessories.InstallationrequestFun;
 import caraccessories.Product;
 import caraccessories.ProductFun;
 import caraccessories.UserFun;
@@ -40,7 +42,9 @@ public class makepurchasesTest {
 	}
 	@Then("I will found the product with product id as {int}")
 	public void i_will_found_the_product_with_product_id_as(Integer int1) {
-		assertTrue(ProductFun.getflag4()==true);
+	    assertEquals(true,ProductFun.getflag4());
+
+	//	assertTrue(ProductFun.getflag4()==true);
 
 	//	 assertTrue(productfun.getproductid1(int1)!=null);
 		// productfun.printOrderList();
@@ -52,7 +56,9 @@ public class makepurchasesTest {
 	}
 	@Then("I can't found the product with  a product id {int}")
 	public void i_can_t_found_the_product_with_a_product_id(Integer int1) {
-		assertTrue(ProductFun.getflag4()==false);
+	    assertEquals(false,ProductFun.getflag4());
+
+		//assertTrue(ProductFun.getflag4()==false);
 
 		//assertFalse(productfun.getproductid1(int1)!=null);
 		// productfun.printProductList();
