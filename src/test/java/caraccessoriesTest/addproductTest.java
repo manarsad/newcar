@@ -1,5 +1,6 @@
 package caraccessoriesTest;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import org.junit.Assert;
@@ -43,8 +44,7 @@ public class addproductTest {
 
 	@Then("I will found the product with product id {int}")
 	public void i_will_found_the_product_with_product_id(Integer int1) {
-		assertTrue(ProductFun.getflag1()==false);
-		// assertTrue(productfun.getproductid1(int1)!=null);		
+	    assertEquals(false, ProductFun.getflag1());
 
 	}
 	@Given("the admin not logged in")
@@ -60,9 +60,10 @@ public void i_try_to_add_a_product_with_productid_and_productname_and_productdes
 }
 @Then("I can't found the product with product id {int}")
 public void i_can_t_found_the_product_with_product_id(Integer int1) {
-	assertTrue(ProductFun.getflag1()==true);
-	 productfun.printProductList();
+    assertEquals(true, ProductFun.getflag1());
+    productfun.printProductList();
 }
+
 
 
 
