@@ -45,7 +45,7 @@ public class deleteproductTest {
 	}
 	@Then("I can't found the product with  a productid {int}")
 	public void i_can_t_found_the_product_with_a_productid(Integer int1) {
-	    assertEquals(false, ProductFun.getflag2());
+	    assertEquals(false, ProductFun.getflag3());
 		//assertFalse(productfun.getproductid1(int1)!=null);		
 		assertFalse(d);
 
