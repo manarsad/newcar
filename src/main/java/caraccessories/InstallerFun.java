@@ -45,20 +45,6 @@ public class InstallerFun {
 	    }
 	}
 	
-	public static Installer getinstalleremail1(String email) {
-		
-		for (Installer installer : installerList) {
-		
-			if ( email.equals(installer.getInstalleremail())) {
-			
-			return installer;
-
-		}
-	
-		}
-		return null;
-	}
-	
     public String getinstallername1(int installerNumber) {
         if (installerNumber > 0 && installerNumber <= installerList.size()) {
             return installerList.get(installerNumber - 1).getInstallername();
