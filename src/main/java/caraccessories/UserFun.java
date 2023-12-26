@@ -12,7 +12,6 @@ public class UserFun {
 	private static boolean flag3 = false;
 	private static boolean flag4 = false;
 	private static boolean flag5 = false;
-
 	public static boolean getflag1() {
 		return flag1;
 	}
@@ -59,7 +58,7 @@ public class UserFun {
 		return false;
 	}
 	
-	public int gotopage(String email, String password) {
+	public static int gotopage(String email, String password) {
 		for (User user : userList) {
 		    if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
 		        if ("ADMIN".equals(user.getUserlevel())) {
@@ -73,7 +72,7 @@ public class UserFun {
 		}
 		return 0;
 	}
-	public String getusername1(String email) {
+	public static String getusername1(String email) {
 	    for (User user : userList) {
 	        if (email.equals(user.getEmail())) {
 	            return user.getUsername();
