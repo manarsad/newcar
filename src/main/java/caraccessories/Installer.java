@@ -2,12 +2,9 @@ package caraccessories;
 
 import java.util.logging.Logger;
 
-import java.util.Date;
-
-
 public class Installer {
 
-	static Logger logger = Logger.getLogger(firstclass.class.getName());
+	static Logger logger = Logger.getLogger(Installer.class.getName());
 	
 	private String installername;	 
 	private String installeremail;
