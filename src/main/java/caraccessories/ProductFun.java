@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 public class ProductFun {
 	static Logger logger = Logger.getLogger(ProductFun.class.getName());
 	private static List<Product> productList = new ArrayList<>();
@@ -18,6 +19,8 @@ public class ProductFun {
 	private static boolean flag7 = false;
 	private static boolean isSented =false ; 
 
+	private static String valied = "valied";
+	private static String exterior = "exterior";
 
 	
 	public static boolean getflag1() {
@@ -47,13 +50,13 @@ public class ProductFun {
 	
 	
 	static {
-		Product product1 = new Product(1,"vehicle engine","strong vehicle engine", "interior",1000,"C:\\Users\\lenovo\\Desktop\\manar\\4th year\\first\\software\\proj\\vehicle_engine.jpg","valied");
-		Product product2 = new Product(2,"vehicl door","strong vehice door", "exterior",100,"C:\\Users\\lenovo\\Desktop\\javaoop_workspace\\caraccessories\\src\\test\\resources\\door.jpg","valied");
-		Product product3 = new Product(3, "car radio","strong car radio", "Electronics",150, "C:\\Users\\lenovo\\Desktop\\javaoop_workspace\\caraccessories\\src\\test\\resources\\radio.jpg","valied");
-		Product product4 = new Product(9, "car maicrophone","strong car maicrophone", "Electronics",150, "C:\\Users\\lenovo\\Desktop\\javaoop_workspace\\caraccessories\\src\\test\\resources\\Micro.jpg","valied");
-		Product product5 = new Product(10, "car maicro","strong car maicrophone", "exterior",150, "C:\\Users\\lenovo\\Desktop\\javaoop_workspace\\caraccessories\\src\\test\\resources\\Micro.jpg","valied");
-		Product product6 = new Product(11, "car maicro","strong car maicrophone", "exterior",150, "C:\\Users\\lenovo\\Desktop\\javaoop_workspace\\caraccessories\\src\\test\\resources\\Micro.jpg","valied");
-		Product product7 = new Product(12, "maicro","strong car maicrophone", "Electronic",150, "C:\\Users\\lenovo\\Desktop\\javaoop_workspace\\caraccessories\\src\\test\\resources\\Micro.jpg","valied");
+		Product product1 = new Product(1,"vehicle engine","strong vehicle engine", "interior",1000,"C:\\Users\\lenovo\\Desktop\\manar\\4th year\\first\\software\\proj\\vehicle_engine.jpg",valied);
+		Product product2 = new Product(2,"vehicl door","strong vehice door", exterior,100,"C:\\Users\\lenovo\\Desktop\\javaoop_workspace\\caraccessories\\src\\test\\resources\\door.jpg",valied);
+		Product product3 = new Product(3, "car radio","strong car radio", "Electronics",150, "C:\\Users\\lenovo\\Desktop\\javaoop_workspace\\caraccessories\\src\\test\\resources\\radio.jpg",valied);
+		Product product4 = new Product(9, "car maicrophone","strong car maicrophone", "Electronics",150, "C:\\Users\\lenovo\\Desktop\\javaoop_workspace\\caraccessories\\src\\test\\resources\\Micro.jpg",valied);
+		Product product5 = new Product(10, "car maicro","strong car maicrophone", exterior,150, "C:\\Users\\lenovo\\Desktop\\javaoop_workspace\\caraccessories\\src\\test\\resources\\Micro1.jpg",valied);
+		Product product6 = new Product(11, "car maicro","strong car maicrophone2", exterior,150, "C:\\Users\\lenovo\\Desktop\\javaoop_workspace\\caraccessories\\src\\test\\resources\\Micro2.jpg",valied);
+		Product product7 = new Product(12, "maicro","strong car maicrophone3", "Electronic",150, "C:\\Users\\lenovo\\Desktop\\javaoop_workspace\\caraccessories\\src\\test\\resources\\Micro3.jpg",valied);
 
 		productList.add(product1);
 		productList.add(product2);
