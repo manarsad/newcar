@@ -10,16 +10,18 @@ public class Installationrequest {
 	private String day ;
 	private String month;
 	private int hour;
-	public Installationrequest( int requestid  , String reqinstallername,int productid ,String reqproductname, String reqcostumername , String day , String month , int hour) {
-		this.requestid=requestid;
-		this.reqinstallername= reqinstallername;
-		this.productid=productid;
-		this.reqproductname=reqproductname;
-		this.reqcostumername=reqproductname;
-		this.day=day;
-		this.month=month;
-		this.hour=hour;
+	
+	public Installationrequest(int requestid, String reqinstallername, int productid, String reqproductname, String reqcostumername, String day, String month, int hour) {
+	    this.requestid = requestid;
+	    this.reqinstallername = reqinstallername;
+	    this.productid = productid;
+	    this.reqproductname = reqproductname;
+	    this.reqcostumername = reqcostumername;  // Corrected this line
+	    this.day = day;
+	    this.month = month;
+	    this.hour = hour;
 	}
+
 	public Installationrequest() {
 		
 	}
