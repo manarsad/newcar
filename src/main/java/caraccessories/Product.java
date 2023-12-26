@@ -19,7 +19,6 @@ public class Product {
 	private String productimage; 
 	private String productavailability ;
 	
-	
 	public int getProductid() {
 		return productid;
 	}
