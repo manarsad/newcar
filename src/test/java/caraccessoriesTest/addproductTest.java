@@ -1,7 +1,9 @@
 package caraccessoriesTest;
+
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import org.junit.Assert;
+
 import caraccessories.Product;
 import caraccessories.ProductFun;
 import caraccessories.User;
@@ -11,17 +13,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import java.util.*;
 import java.util.logging.Level;
-
-
-
 public class addproductTest {
 	
 	private Product product = new Product();
     private static ProductFun productfun = new ProductFun();
 
     private static List<Product> result;
-
-//	private static List<Product> productList = mydata.listproducts();
 	private int productid;
 	private String productname;
 	private String productdescription; 
@@ -30,7 +27,6 @@ public class addproductTest {
 	private String productimage; 
 	private String productavailability ;	
 	 private boolean l;
-
 	
 	 @Given("the admin is already logged in with email {string} and password {string}")
 	 public void the_admin_is_already_logged_in_with_email_and_password(String string, String string2) {
