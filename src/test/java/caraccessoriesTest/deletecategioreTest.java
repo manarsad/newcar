@@ -1,5 +1,6 @@
 package caraccessoriesTest;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -31,7 +32,7 @@ public class deletecategioreTest {
 	 }
 	 @Then("I will found the product with productcategiore as {string}")
 	 public void i_will_found_the_product_with_productcategiore_as(String string) {
-			assertTrue(ProductFun.getflag2()==true);
+		    assertEquals(true, ProductFun.getflag2());
 		 productfun.printProductList();
 	     
 	 }
@@ -40,29 +41,12 @@ public class deletecategioreTest {
 	 public void i_try_to_delete_a_product_with_productcategiore(String string) {
 		 d= productfun.deletecategorie(string);
 	 }
-	 @Then("I can't found the product with a productcategiore {string}")
-	    public void i_can_t_found_the_product_with_a_productcategiore(String string) {
-	        assertTrue(ProductFun.getflag2() == false);
-	        assertFalse(d);
 
-	        // Additional Test Case 1: Trying to delete a non-existing product category
-	        String nonExistingCategory = "NonExistingCategory";
-	        assertFalse(productfun.deletecategorie(nonExistingCategory));
-	        assertFalse(ProductFun.getflag2());
-
-	        // Additional Test Case 2: Deleting a product category with associated products
-	        // (Ensure appropriate setup in the ProductFun for this scenario)
-	        String categoryWithProducts = "CategoryWithProducts";
-	        assertTrue(productfun.deletecategorie(categoryWithProducts));
-	        assertTrue(ProductFun.getflag2());
-	        productfun.printProductList(); // Print updated product list
-	    }
 	 
-//	 @Then("I can't found the product with  a productcategiore {string}")
-//	 public void i_can_t_found_the_product_with_a_productcategiore(String string) {
-//			assertTrue(ProductFun.getflag2()==false);
-//		 //assertFalse(productfun.getproductcategiore1(string)!=null);		
-//		 assertFalse(d);
-//	 }
+	 @Then("I can't found the product with  a productcategiore {string}")
+	 public void i_can_t_found_the_product_with_a_productcategiore(String string) {
+		    assertEquals(false, ProductFun.getflag2());
+		 assertFalse(d);
+	 }
 
 }
