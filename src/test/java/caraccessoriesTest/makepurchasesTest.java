@@ -7,6 +7,7 @@ import java.util.List;
 
 import caraccessories.Product;
 import caraccessories.ProductFun;
+import caraccessories.UserFun;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -28,7 +29,11 @@ public class makepurchasesTest {
 	private String productavailability ;	
 	 private boolean l;
 
-	
+	 @Given("the customer is already logged in with email {string} and password {string}")
+	 public void the_customer_is_already_logged_in_with_email_and_password(String string, String string2) {
+		 UserFun.gotopage(string, string2);
+	 }
+
 	@When("purchase a product with product id {int}")
 	public void purchase_a_product_with_product_id(Integer int1) {
 	     result = productfun.makepurchases(int1);
