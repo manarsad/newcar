@@ -106,17 +106,12 @@ public class ProductFun {
 	
 	
 	public static void printProductList() {
-	    if (!productList.isEmpty()) {
-	        logger.info("Product List:");
-	        for (Product product : productList) {
-	            logger.info(product.toString());
-	        }
-	        flag7 = true;
-	    } else {
-	        logger.info("Product List is empty.");
-	        flag7 = false;  // Update the flag accordingly based on your requirements
-	    }
-	}
+        logger.info("Product List:");
+        for (Product product : productList) {
+            logger.info(product.toString());
+        }
+        flag7=true;
+    }
 	
 	
 	public static boolean deleteproduct (int productid){
@@ -221,16 +216,11 @@ public class ProductFun {
 	
 	
 	public static void printOrderList() {
-	    if (!orderList.isEmpty()) {
-	        logger.info("Order List:");
-	        for (Product product : orderList) {
-	            logger.info(product.toString());
-	        }
-	    } else {
-	        logger.info("Order List is empty.");
-	        // You can add additional logic or update flags based on your requirements
-	    }
-	}
+        logger.info("Order List:");
+        for (Product product : orderList) {
+            logger.info(product.toString());
+        }
+    }
 	
 	public static void sendOrderConfirmationEmail(String productName , int totalPrice) {
 		String from = "s12027821@stu.najah.edu";
