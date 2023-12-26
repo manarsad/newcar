@@ -14,7 +14,6 @@ public class User {
 	private String userlevel;
 	private int userphone;
 	private String useraddress;
-//	private String userlevelupper;
 	
 	public String getUsername() {
 		return username;
@@ -68,10 +67,9 @@ public class User {
           this.userlevel = userlevel ; 
           this.userphone = userphone;
           this.useraddress = useraddress;
-	//		this.userlogged = false;
+
           
    }
-   
    @Override
    public String toString() {
        return "User{" +
@@ -84,69 +82,4 @@ public class User {
                '}';
    }
    
-   
-//    public boolean login(String email, String password) {
-//    	
-//        for (User user : userlist1) {
-//            if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
-//    	        logger.log(Level.INFO, "login success ! ");
-//                return true ;
-//            }
-//        }
-//        return false;
-//    }
-//    
-//    public int gotopage(String email, String password, List<User> userlist) {
-//        for (User user : userlist) {
-//            if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
-//                String userlevelupper = user.getUserlevel().toUpperCase(); 
-//
-//                if ("ADMIN".equals(userlevelupper)) {
-//                    return 1;
-//                } else if ("CUSTOMER".equals(userlevelupper)) {
-//                    return 2;
-//                } else {
-//                    return 3;
-//                }
-//            }
-//        }
-//        return 0;
-//    }
-//    
-//	public List<User>signup(String username, String email,String password, String userlevel , List<User> userlist)
-//	{
-//		String userlevelupper = userlevel.toUpperCase();
-//    	userlist.add(new User(username,email ,password , userlevelupper));
-//		return userlist;
-//
-//		}
-//	
-//    public boolean retsign(String email, List<User> userlist) {
-//        for (User user : userlist) {
-//            if ( user.getEmail().equals(email))
-//            {
-//                return true ;
-//            }
-//        }
-//        return false;
-//    }
-//    
-//    
-//    public static void printuserlist( List<User> userlist) {
-//    	 for (User user : userlist) {
-//	    	    logger.log(Level.INFO, "User name :"+ user.getUsername()+"\n");
-//	    	    logger.log(Level.INFO, "User email :"+ user.getEmail()+"\n");
-//	    	    logger.log(Level.INFO, "User password :"+ user.getPassword()+"\n");
-//	    	    logger.log(Level.INFO, "User level :"+ user.getUserlevel()+"\n");
-//         }
-//    	
-//    }
-//    
-//    public static void logout () {
-//	    logger.log(Level.INFO, "Log out sucess!");
-//
-//    }
-
-	 
-
 }
