@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 public class InstallationrequestFun {
 	
 	static Logger logger = Logger.getLogger(InstallationrequestFun.class.getName());
-	private static List<Installationrequest> requestList = new ArrayList<Installationrequest>();
+	private static List<Installationrequest> requestList = new ArrayList<>();
 	private static boolean flag1 = false;
 
 	public static boolean getflag1() {
@@ -32,7 +32,7 @@ public class InstallationrequestFun {
 	public void printRequestList() {
         logger.log(Level.INFO, "Request List:");
         for (Installationrequest request : requestList) {
-            System.out.println(request);
+            logger.info(request.toString());
         }
     }
 	
