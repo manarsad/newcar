@@ -1,5 +1,6 @@
 package caraccessoriesTest;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
@@ -31,8 +32,7 @@ public void the_user_try_to_logout() {
 @Then("the user will logout")
 public void the_user_will_logout() {
     logger.log(Level.INFO, "logout success! ");
-	assertTrue(UserFun.getflag2()==true);
-
+    assertEquals(true, ProductFun.getflag2());
 
 
 
