@@ -32,7 +32,8 @@ public void the_user_try_to_logout() {
 @Then("the user will logout")
 public void the_user_will_logout() {
     logger.log(Level.INFO, "logout success! ");
-    assertEquals(true, ProductFun.getflag2());
+    assertEquals(true, UserFun.getflag2());
+
 
 
 
