@@ -50,7 +50,7 @@ public class EmailSender {
 
 	            // Send the email
 	            Transport.send(message);
-	            System.out.println("Email sent successfully.");
+		    logger.log(Level.INFO, "Email sent successfully. \n");
 	        } 
 	 catch (MessagingException e) {
 	            e.printStackTrace();
