@@ -29,12 +29,21 @@ public class InstallationrequestFun {
             return requestList;
 
 	}
+
+	
 	public void printRequestList() {
-        logger.log(Level.INFO, "Request List:");
-        for (Installationrequest request : requestList) {
-            logger.info(request.toString());
-        }
-    }
+	    if (shouldPrintRequestList()) {
+	        logger.log(Level.INFO, "Request List:");
+	        for (Installationrequest request : requestList) {
+	            logger.info(request.toString());
+	        }
+	    }
+	}
+
+	private boolean shouldPrintRequestList() {
+
+	    return !requestList.isEmpty();
+	}
 	
 	
     public static void sendEmailConfirmation(String customerName, String productName) {
