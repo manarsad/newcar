@@ -1,7 +1,5 @@
-
 package caraccessoriesTest;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import org.junit.Assert;
@@ -21,6 +19,7 @@ public class deleteproductTest {
     private static List<Product> result;
 	private int productid;
 	 private boolean d;
+	
 	@When("delete a product with productid {int}")
 	public void delete_a_product_with_productid(Integer int1) {
     d= productfun.deleteproduct(int1);
@@ -29,7 +28,7 @@ public class deleteproductTest {
 	@Then("I will found the product with productid as {int}")
 	public void i_will_found_the_product_with_productid_as(Integer int1) {
 		//true.. delete 
-	    assertEquals(true, ProductFun.getflag3());
+		assertTrue(ProductFun.getflag3()==true);
 
 	   //  assertFalse(productfun.getproductid1(int1)!=null);		
 		 assertTrue(d);
@@ -45,7 +44,8 @@ public class deleteproductTest {
 	}
 	@Then("I can't found the product with  a productid {int}")
 	public void i_can_t_found_the_product_with_a_productid(Integer int1) {
-	    assertEquals(false, ProductFun.getflag3());
+		assertTrue(ProductFun.getflag2()==false);
+
 		//assertFalse(productfun.getproductid1(int1)!=null);		
 		assertFalse(d);
 
