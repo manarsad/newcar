@@ -1,5 +1,6 @@
 package caraccessoriesTest;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -29,7 +30,9 @@ public class deleteuserTest {
 	 @Then("I will found the user with useremail as {string}")
 	 public void i_will_found_the_user_with_useremail_as(String string) {
 			//true.. delete 
-			assertTrue(UserFun.getflag1()==true);
+		    assertEquals(true,UserFun.getflag1());
+
+			//assertTrue(UserFun.getflag1()==true);
 			//assertTrue(ProductFun.getflag3()==true);
 
 	    // assertFalse(userfun.getemail1(string)!=null);		
@@ -45,7 +48,9 @@ public class deleteuserTest {
 	}
 	@Then("I can't found the user with  a useremail {string}")
 	public void i_can_t_found_the_user_with_a_useremail(String string) {
-		assertTrue(UserFun.getflag1()==false);
+	    assertEquals(false,UserFun.getflag1());
+
+		//assertTrue(UserFun.getflag1()==false);
 
 		//assertFalse(userfun.getemail1(string)!=null);		
 		 assertFalse(d);
