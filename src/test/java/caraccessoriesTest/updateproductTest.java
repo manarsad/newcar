@@ -17,8 +17,6 @@ public class updateproductTest {
     private static ProductFun productfun = new ProductFun();
 
     private static List<Product> result;
-
-//	private static List<Product> productList = mydata.listproducts();
 	private int productid;
 	private String productname;
 	private String productdescription; 
