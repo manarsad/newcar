@@ -1,5 +1,6 @@
 package caraccessoriesTest;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import caraccessories.ProductFun;
@@ -13,34 +14,11 @@ public class sendemailTest {
 	}
 	@Then("Send email")
 	public void send_email() {
-		assertTrue(ProductFun.getisSented()==true);
+	    assertEquals(true,ProductFun.getisSented());
+
+	//	assertTrue(ProductFun.getisSented()==true);
 
 
 	}
-
-//	@When("order is complete")
-//	public void order_is_complete() {
-//		ProductFun.sendOrderConfirmationEmail(null, 0);
-//		
-//		
-//	}
-//	@Then("Send email")
-//	public void send_email() {
-//		assertTrue(ProductFun.getisSented()==true);
-//
-//		
-//	}
-//	
-//	@When("order is not complete")
-//	public void order_is_not_complete() {
-//
-//	}
-//	@Then("print your product is not incomplete yet")
-//	public void print_your_product_is_not_incomplete_yet() {
-//		assertTrue(ProductFun.getisSented()==false);
-//
-//
-//	}
-
 
 }
