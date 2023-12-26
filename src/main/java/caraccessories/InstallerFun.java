@@ -37,14 +37,14 @@ public class InstallerFun {
 	
 	
 	public void printInstallerList() {
-    	logger.log(Level.INFO, "Installer List: ");
+	    logger.log(Level.INFO, "Installer List: ");
 	    int i = 1;
 	    for (Installer installer : installerList) {
-	    	logger.log(Level.INFO, "Installer {" + i + ": " + installer);
+	        logger.log(Level.INFO, String.format("Installer {%d: %s}", i, installer));
 	        i++;
 	    }
 	}
-	
+
     public String getinstallername1(int installerNumber) {
         if (installerNumber > 0 && installerNumber <= installerList.size()) {
             return installerList.get(installerNumber - 1).getInstallername();
