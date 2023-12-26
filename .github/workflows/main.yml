@@ -1,7 +1,7 @@
 name: GitHup Actions Maven Build Example
 on:
   push:
-      branches: [ sama]
+      branches: [ master]
 jobs:
 
   build-on-ubuntu:
