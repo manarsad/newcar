@@ -7,6 +7,7 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import org.junit.Assert;
 
+import caraccessories.ProductFun;
 import caraccessories.User;
 import caraccessories.UserFun;
 import io.cucumber.java.en.Given;
@@ -38,16 +39,13 @@ public void i_try_to_add_a_user_with_username_and_email_and_password_and_userlev
 }
 @Then("I will add it with email {string}")
 public void i_will_add_it_with_email(String string) {
-	assertTrue(UserFun.getflag5()==false);
+    assertEquals(false, UserFun.getflag5());
+
+	//assertTrue(UserFun.getflag5()==false);
 
 	// assertTrue(userfun.getemail1(string)!=null);
 
 }
-//
-//	 @Then("I will found the user with email {string}")
-//	 public void i_will_found_the_user_with_email(String string) {
-//		 assertTrue(userfun.getemail1(string)!=null);
-//	 }
 
 	@Given("the usear not logged in")
 	public void the_usear_not_logged_in() {
@@ -64,7 +62,9 @@ public void i_try_to_add_a_user_with_a_username_and_email_and_password_and_userl
 	@Then("I can't found the user with email {string}")
 	public void i_can_t_found_the_user_with_email(String string) {
 		//assertTrue(userfun.getemail1(string)!=null);
-		assertTrue(UserFun.getflag5()==true);
+	    assertEquals(true, UserFun.getflag5());
+
+		//assertTrue(UserFun.getflag5()==true);
 
 		userfun.printUserList();
 		
