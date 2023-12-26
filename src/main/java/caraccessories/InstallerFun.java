@@ -19,17 +19,6 @@ public class InstallerFun {
 		installerList.add(installer1);
 		installerList.add(installer2);
 		installerList.add(installer3);
-
-	}
-	public static void add(String installername ,String installeremail ,String day , String month , int hour ) {
-
-		Installer installer = new Installer();
-		installer.setInstallername(installername);
-		installer.setInstalleremail(installeremail);
-		installer.setDay(day);
-		installer.setMonth(month);
-		installer.setHour(hour);
-		installerList.add(installer);
 	}
 	
 	public List<Installer> scheduleappointments(String installername ,String installeremail ,String day , String month , int hour ) {
@@ -78,56 +67,19 @@ public class InstallerFun {
     }
     
     public String getinstallerday1(int installerNumber) {
-       // if (installerNumber > 0 && installerNumber <= installerList.size()) {
             return installerList.get(installerNumber - 1).getDay();
-      //  } else {
-       //     return "Invalid installer number";
-      //  }
+
     }
     public String getinstallermonth1(int installerNumber) {
       return installerList.get(installerNumber - 1).getMonth();
 
-//        if (installerNumber > 0 && installerNumber <= installerList.size()) {
-//            return installerList.get(installerNumber - 1).getMonth();
-//        } else {
-//            return "Invalid installer number";
-//        }
-//    }
     }
-    
     public int getinstallerhour1(int installerNumber) {
         return installerList.get(installerNumber - 1).getHour();
 
-//          if (installerNumber > 0 && installerNumber <= installerList.size()) {
-//              return installerList.get(installerNumber - 1).getMonth();
-//          } else {
-//              return "Invalid installer number";
-//          }
-//      }
       }
     
-	
-//	public static String getinstallername1(int requestnumber) {
-//		String installername;
-//		if (requestnumber >0 && requestnumber<= installerList.size()) {
-//			
-//		}
-//		return installername;
-//			
-//		}
-//		for (Product product : productList) {
-//		
-//			if ( productid == product.getProductid()) {
-//			productname=product.getProductname();
-//			return productname;
-//		}
-//			else {
-//                System.out.println("This Product already does not exists.");
-//			}
-//	
-//		}
-//		return null;
-//	}
+
 
 
 }
