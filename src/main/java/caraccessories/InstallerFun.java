@@ -3,7 +3,7 @@ import java.util.logging.Logger;
 
 import java.util.*;
 public class InstallerFun {
-	static Logger logger = Logger.getLogger(firstclass.class.getName());
+	static Logger logger = Logger.getLogger(InstallationrequestFun.class.class.getName());
 	private static List<Installer> installerList = new ArrayList<Installer>();	
 	private static boolean flag1;
 	public static boolean getflag1() {
