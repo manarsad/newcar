@@ -9,5 +9,4 @@ import io.cucumber.junit.CucumberOptions;
 //@CucumberOptions(plugin= {"html: target/cucumber.html"},features="use_cases/viewproduct.feature",glue="caraccessoriesTest")
 
 public class acceptanceTest {
-
 }
