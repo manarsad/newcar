@@ -1,10 +1,11 @@
 package caraccessories;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import java.util.*;
 public class InstallerFun {
-	static Logger logger = Logger.getLogger(InstallationrequestFun.class.getName());
-	private static List<Installer> installerList = new ArrayList<Installer>();	
+	static Logger logger = Logger.getLogger(InstallerFun.class.getName());
+	private static List<Installer> installerList = new ArrayList<>();	
 	private static boolean flag1;
 	public static boolean getflag1() {
 		return flag1;
@@ -12,19 +13,21 @@ public class InstallerFun {
 	
 	static {
 		Installer installer1 = new Installer("ali","ali@gmail.com", "Sunday","14-April",12);
-		Installer installer2 = new Installer("ali","ali@gmail.com", "Monday","14-April",2);
-		Installer installer3 = new Installer("ali","ali@gmail.com", "Monday","14-April",4);
+		Installer installer2 = new Installer("ali1","ali@gmail.com", "Monday","14-Jun",2);
+		Installer installer3 = new Installer("ali2","ali@gmail.com", "Monday","14-May",4);
 		installerList.add(installer1);
 		installerList.add(installer2);
 		installerList.add(installer3);
 	}
-	
-	public List<Installer> scheduleappointments(String installername ,String installeremail ,String day , String month , int hour ) {
-		  for (Installer installer : installerList) {
+
+	public static List<Installer> scheduleappointments(String installername ,String installeremail ,String day , String month , int hour ) {
+	    List<Installer> conflictingAppointments = new ArrayList<>();
+  
+		for (Installer installer : installerList) {
 	            if (installer.getInstalleremail().equals(installeremail)&&installer.getInstallername().equals(installername)&& installer.getDay().equals(day)&&installer.getMonth().equals(month)&&installer.getHour()==hour) {
-	                System.out.println("This appointment is already exists.");
+	            	logger.log(Level.INFO, "This appointment is already exists. ");
 	                flag1=false;
-	                return null; 
+	                return conflictingAppointments; 
 	            }
 	        }
 		installerList.add(new Installer(installername ,installeremail ,day , month , hour));
@@ -34,10 +37,10 @@ public class InstallerFun {
 	
 	
 	public void printInstallerList() {
-	    System.out.println("Installer List:");
+    	logger.log(Level.INFO, "Installer List: ");
 	    int i = 1;
 	    for (Installer installer : installerList) {
-	        System.out.println("Installer { " + i + ": " + installer);
+	    	logger.log(Level.INFO, "Installer {" + i + ": " + installer);
 	        i++;
 	    }
 	}
