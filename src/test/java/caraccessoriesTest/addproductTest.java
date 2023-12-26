@@ -2,7 +2,6 @@ package caraccessoriesTest;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import org.junit.Assert;
-
 import caraccessories.Product;
 import caraccessories.ProductFun;
 import caraccessories.User;
