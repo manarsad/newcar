@@ -1,8 +1,10 @@
 package caraccessoriesTest;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import caraccessories.ProductFun;
+import caraccessories.UserFun;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,7 +24,9 @@ public class viewproductTest {
 	}
 	@Then("the product list is print in the screen")
 	public void the_product_list_is_print_in_the_screen() {
-		assertTrue(ProductFun.getflag7()==true);
+	    assertEquals(true, ProductFun.getflag7());
+
+	//	assertTrue(ProductFun.getflag7()==true);
 
 
 	}
