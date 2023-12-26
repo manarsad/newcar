@@ -17,7 +17,6 @@ import java.util.logging.Logger;
 
 import io.cucumber.core.internal.com.fasterxml.jackson.core.JsonProcessingException;
 import io.cucumber.core.internal.com.fasterxml.jackson.databind.ObjectMapper;
-//import caraccessories.firstclass;
 
 import java.util.logging.Level;
 import java.nio.ByteBuffer;
@@ -40,12 +39,6 @@ public class firstclass {
     private static Product result = new Product();
     
     private static boolean e=true ;
-
-    
-//	 private static List<User> userList = mydata.listUsers(); 
-//	 private static List<Product> productList = mydata.listproducts(); 
-
-
 	static Logger logger = Logger.getLogger(firstclass.class.getName());
     static Scanner scanner = new Scanner(System.in);
     
@@ -442,16 +435,13 @@ public class firstclass {
 			        	// edit profile
 			        	//update function
 			        	logger.log(Level.INFO, "Please enter the information to update you acount \n ");
-//			        	logger.log(Level.INFO, "Enter your old email \\r\\n");
-//				  	       String oldemail = scanner.next();
 			        	logger.log(Level.INFO, "Enter your new name \\n");
 				  	       String username = scanner.next();
 				  	       logger.log(Level.INFO, "Enter your new email \\r\\n");
 				  	       String email1 = scanner.next();
 				  	       logger.log(Level.INFO, "Enter your new password \\n");
 				  	       String password1= scanner.next();
-				  	       //logger.log(Level.INFO, "Enter user level \\n");
-				  	       //String userlevel = scanner.next();
+
 				  	       logger.log(Level.INFO, "Enter your new phone \\n");
 				 	       int userphone = scanner.nextInt();
 				 	       logger.log(Level.INFO, "Enter your new address \\n");
@@ -468,7 +458,6 @@ public class firstclass {
 				                System.out.println("User not found for update.\n");
 				                continue;
 				            }
-			        	
 			        }
 			        else if (input2 == 4 )
 			        {
