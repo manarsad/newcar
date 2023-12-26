@@ -29,7 +29,6 @@ public class makepurchasesTest {
 	private String productavailability ;	
 	 private boolean l;
 
-	
 	 @Given("the customer is already logged in with email {string} and password {string}")
 	 public void the_customer_is_already_logged_in_with_email_and_password(String string, String string2) {
 		 UserFun.gotopage(string, string2);

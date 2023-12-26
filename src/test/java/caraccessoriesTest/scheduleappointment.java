@@ -29,7 +29,6 @@ public class scheduleappointment {
     }
 
 	
-	
 	@When("I try to add a appointmant with installername {string} and installeremail {string} and installerday {string} and installermonth {string} and installerhour {int}")
 	public void i_try_to_add_a_appointmant_with_installername_and_installeremail_and_installerday_and_installermonth_and_installerhour(String string, String string2, String string3, String string4, Integer int1) {
 		result = installerfun.scheduleappointments(string, string2, string3, string4, int1);

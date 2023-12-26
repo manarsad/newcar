@@ -23,7 +23,6 @@ public class deletecategioreTest {
 	 @Given("the admin is already logged in")
 	 public void the_admin_is_already_logged_in() {
 			System.out.println("..");
-
 	 }
 	 @When("delete a product with productcategiore {string}")
 	 public void delete_a_product_with_productcategiore(String string) {

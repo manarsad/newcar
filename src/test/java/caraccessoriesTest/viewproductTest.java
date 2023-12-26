@@ -10,7 +10,6 @@ import io.cucumber.java.en.When;
 public class viewproductTest {
 	
     private static ProductFun productfun = new ProductFun();
-
     @Given("the customer is already logged in")
     public void the_customer_is_already_logged_in() {
 		System.out.println("..");

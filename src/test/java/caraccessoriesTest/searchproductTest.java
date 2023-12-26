@@ -23,7 +23,6 @@ public class searchproductTest {
 	private boolean s;
 	//public Product result = new Product();
 
-	
 	@Given("there is a product with name {string}")
 	public void there_is_a_product_with_name(String string) {
 		System.out.println("..");

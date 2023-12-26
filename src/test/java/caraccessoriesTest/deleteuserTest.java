@@ -21,7 +21,6 @@ public class deleteuserTest {
 	private int productid;
 	 private boolean d;
 	 
-	 
 	 @When("delete a user with useremail {string}")
 	 public void delete_a_user_with_useremail(String string) {
 		 d= userfun.deleteuser(string);

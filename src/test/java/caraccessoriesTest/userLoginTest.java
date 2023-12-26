@@ -25,7 +25,6 @@ public class userLoginTest {
 	 private boolean b;
 	 
 		static Logger logger = Logger.getLogger(firstclass.class.getName());
-
 	@Given("there is already email {string} and password {string}")
 	public void there_is_already_email_and_password(String string, String string2) {
 		email = string;
