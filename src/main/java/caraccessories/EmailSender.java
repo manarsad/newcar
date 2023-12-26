@@ -18,7 +18,6 @@ public class EmailSender {
     }
 	static Logger logger = Logger.getLogger(EmailSender.class.getName());
 
-	private static boolean isSented=false;
 	   public static void sendEmail(String from, String to, String subject, String messageText) {
 	        Properties properties = System.getProperties();
 	        properties.put("mail.smtp.host", "smtp.gmail.com");
