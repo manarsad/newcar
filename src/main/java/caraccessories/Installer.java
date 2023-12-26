@@ -9,19 +9,12 @@ public class Installer {
 
 	static Logger logger = Logger.getLogger(firstclass.class.getName());
 	
-	private int installerapp;
 	private String installername;	 
 	private String installeremail;
 	private String day ;
 	private String month;
 	private int hour;
 	
-	public int getInstallerapp() {
-		return installerapp;
-	}
-	public void setInstallerapp(int installerapp) {
-		this.installerapp = installerapp;
-	}
 	public String getInstallername() {
 		return installername;
 	}
