@@ -12,9 +12,9 @@ public class UserFun {
 	private static boolean flag3 = false;
 	private static boolean flag4 = false;
 	private static boolean flag5 = false;
-	private static String ADMIN = "ADMIN";
-	private static String CUSTOMER = "CUSTOMER";
-	private static String INSTALLER = "INSTALLER";
+	private static final String ADMIN = "ADMIN";
+	private static final String CUSTOMER = "CUSTOMER";
+	private static final String INSTALLER = "INSTALLER";
 
 	public static boolean getflag1() {
 		return flag1;
