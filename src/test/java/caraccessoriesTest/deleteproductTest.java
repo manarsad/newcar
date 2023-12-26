@@ -7,8 +7,6 @@ import org.junit.Assert;
 
 import caraccessories.Product;
 import caraccessories.ProductFun;
-import caraccessories.User;
-import caraccessories.mydata;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,7 +20,6 @@ public class deleteproductTest {
     private static List<Product> result;
 	private int productid;
 	 private boolean d;
-	
 	@When("delete a product with productid {int}")
 	public void delete_a_product_with_productid(Integer int1) {
     d= productfun.deleteproduct(int1);
