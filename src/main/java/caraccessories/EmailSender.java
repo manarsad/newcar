@@ -1,6 +1,8 @@
 package caraccessories;
 
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.mail.Authenticator;
 import javax.mail.Message;
@@ -11,17 +13,14 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-//import com.google.api.services.gmail.model.Message;
-
 public class EmailSender {
+    private EmailSender() {
+    	
+    }
+	static Logger logger = Logger.getLogger(EmailSender.class.getName());
+
 	private static boolean isSented=false;
-	
-//	public static boolean isSented() {
-//		return isSented;
-//	}
-//	
 	   public static void sendEmail(String from, String to, String subject, String messageText) {
-	        // Set up the properties for the email server
 	        Properties properties = System.getProperties();
 	        properties.put("mail.smtp.host", "smtp.gmail.com");
 	        properties.put("mail.smtp.port", "587");
@@ -49,7 +48,7 @@ public class EmailSender {
 	            message.setText(messageText);
 	            // Send the email
 	            Transport.send(message);
-	            System.out.println("Email sent successfully.");
+	            logger.log(Level.INFO, "Email sent successfully.");
 	        } catch (MessagingException e) {
 	            e.printStackTrace();
 	        }
