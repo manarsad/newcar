@@ -64,20 +64,7 @@ public class ProductFun {
 
 		
 	}
-	public static void add( int productid ,String productname, String productdescription, String productcategorie, int productprice,
-			String productimage, String productavailability) {
 		
-		Product product= new Product() ;
-		product.setProductid(productid);
-		product.setProductname(productname);
-		product.setProductdescription(productdescription);
-		product.setProductcategorie(productcategorie);
-		product.setProductprice(productprice);
-		product.setProductimage(productimage);
-		product.setProductavailability(productavailability);
-	}
-	
-	
 	public List<Product> addproduct(int productid , String productname, String productdescription, String productcategorie, int productprice,
 	String productimage, String productavailability){
 		
@@ -101,19 +88,19 @@ public class ProductFun {
 	}
 	
 	
-	public static Product getproductid1(int productid) {
-		
-		for (Product product : productList) {
-		
-			if ( productid == product.getProductid()) {
-			
-			return product;
-
-		}
-	
-		}
-		return null;
-	}
+//	public static Product getproductid1(int productid) {
+//		
+//		for (Product product : productList) {
+//		
+//			if ( productid == product.getProductid()) {
+//			
+//			return product;
+//
+//		}
+//	
+//		}
+//		return null;
+//	}
 	
 	
 	public String getproductname1(int productid) {
@@ -195,20 +182,6 @@ public static Product getproductcategiore1(String productcategiore) {
 
         return matchingProducts.isEmpty() ? null : matchingProducts;
     }
-	
-	public static Product getproductname1(String productname) {
-		
-		for (Product product : productList) {
-		
-			if ( productname.equals(product.getProductname())) {
-			
-			return product;
-
-		}
-		}
-		return null;
-	}
-			
 		
 	public List<Product> updateProduct(int productid, String newProductName, String newProductDescription, String newProductCategorie,
             int newProductPrice, String newProductImage, String newProductAvailability ,int oldproductid) {
@@ -262,20 +235,20 @@ public static Product getproductcategiore1(String productcategiore) {
 	    return null;
 	}
 	
-//	public boolean getorderlist1() {
-//		
-//		for (Product product : orderList) {
-//			if ( orderList==null) {
-//		        System.out.println(" order list is empty ");
-//			return false;
-//		}
-//		}
-//		return true;
-//	}
+	public boolean getorderlist1() {
+		
+		for (Product product : orderList) {
+			if ( orderList==null) {
+		        System.out.println(" order list is empty ");
+			return false;
+		}
+		}
+		return true;
+	}
 	public static boolean isOrderListEmpty() {
         return orderList.isEmpty();
     }
-	
+
 	
 	
 	
