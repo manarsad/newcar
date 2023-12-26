@@ -1,5 +1,6 @@
 package caraccessoriesTest;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -35,7 +36,9 @@ public class updateuser {
 			}	
 			@Then("I will found the user with a  useremail {string}")
 			public void i_will_found_the_user_with_a_useremail(String string) {
-				assertTrue(UserFun.getflag3()==true);
+			    assertEquals(true, UserFun.getflag3());
+
+				//assertTrue(UserFun.getflag3()==true);
 
 				//assertTrue(userfun.getemail1(string)!=null);
 				userfun.printUserList();
@@ -55,7 +58,9 @@ public class updateuser {
 			}
 			@Then("I cant found the product with a useremail {string}")
 			public void i_cant_found_the_product_with_a_useremail(String string) {
-				assertTrue(UserFun.getflag3()==true);
+			    assertEquals(true, UserFun.getflag3());
+
+				//assertTrue(UserFun.getflag3()==true);
 
 				//assertFalse(userfun.getemail1(string)!=null);
 				System.out.println("this user is already not exist ");
