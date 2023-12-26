@@ -1,19 +1,18 @@
 package caraccessories;
-import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import java.util.*;
 
 public class UserFun {
-	static Logger logger = Logger.getLogger(firstclass.class.getName());
-	private static List<User> userList = new ArrayList<User>();
+	static Logger logger = Logger.getLogger(UserFun.class.getName());
+	private static List<User> userList = new ArrayList<>();
 	private static boolean flag1 = false;
 	private static boolean flag2 = false;
 	private static boolean flag3 = false;
 	private static boolean flag4 = false;
 	private static boolean flag5 = false;
-	private static boolean flag6 = false;
+
 	public static boolean getflag1() {
 		return flag1;
 	}
@@ -48,7 +47,7 @@ public class UserFun {
 	}
 	
 	
-	public boolean login(String email, String password) {
+	public static boolean login(String email, String password) {
 		for (User user : userList) {
 	        if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
 		        logger.log(Level.INFO, "login success ! ");
@@ -63,8 +62,6 @@ public class UserFun {
 	public int gotopage(String email, String password) {
 		for (User user : userList) {
 		    if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
-//		        String userlevelupper = level.toUpperCase(); 
-
 		        if ("ADMIN".equals(user.getUserlevel())) {
 		            return 1;
 		        } else if ("CUSTOMER".equals(user.getUserlevel())) {
@@ -76,28 +73,21 @@ public class UserFun {
 		}
 		return 0;
 	}
-	
-public String getusername1(String email) {
-		
-		for (User user : userList) {
-		
-			if ( email.equals(user.getEmail())) {
-				String username1=user.getUsername();
-			
-			return username1;
-
-		}
-	
-		}
-		return null;
+	public String getusername1(String email) {
+	    for (User user : userList) {
+	        if (email.equals(user.getEmail())) {
+	            return user.getUsername();
+	        }
+	    }
+	    return null;
 	}
 	
-	public List<User> signup(String username, String email, String password, String userlevel, int userphone, String useraddress) {
+	public static List<User> signup(String username, String email, String password, String userlevel, int userphone, String useraddress) {
         for (User user : userList) {
             if (user.getEmail().equals(email)) {
-                System.out.println("This user already exists.");
+            	logger.log(Level.INFO, "This user already exists. ");
                 flag5=false;
-                return null; 
+                return Collections.emptyList();
             }
         }
 
@@ -107,31 +97,29 @@ public String getusername1(String email) {
         return userList;
     }
 	
-	
 	public void printUserList() {
-        System.out.println("User List:");
+        logger.info("User List:");
         for (User user : userList) {
-            System.out.println(user);
+            logger.info(user.toString());
         }
     }
 	
-	public boolean deleteuser (String useremail){
+	public static boolean deleteuser (String useremail){
 		for (User user : userList) {
             if ( useremail.equals(user.getEmail()) ) {
-            	//flag1=true;
             	userList.remove (user);
             	flag1=true;
                 return true; 
             }
         }
-        System.out.println("This User already not exist.");
+        logger.info("This User already not exist.");
         flag1=false;
 		return false;
 		
 	}
 	
 	
-	public List<User> updateUser(String username, String email1, String password, String userlevel, int userphone, String useraddress , String oldemail) {
+	public static List<User> updateUser(String username, String email1, String password, String userlevel, int userphone, String useraddress , String oldemail) {
 		for (User user : userList) {
 	        String userlevelupper = userlevel.toUpperCase();
 			if (oldemail.equals(user.getEmail())) {
@@ -145,7 +133,7 @@ public String getusername1(String email) {
 				return userList;
 			}
 		}
-		return null;
+		return Collections.emptyList();
 		}
 	
 	
