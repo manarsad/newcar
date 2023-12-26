@@ -18,7 +18,6 @@ public class sendemailTest {
 
 	}
 
-	
 //	@When("order is complete")
 //	public void order_is_complete() {
 //		ProductFun.sendOrderConfirmationEmail(null, 0);
