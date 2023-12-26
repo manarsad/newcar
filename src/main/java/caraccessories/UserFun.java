@@ -29,10 +29,6 @@ public class UserFun {
 	public static boolean getflag5() {
 		return flag5;
 	}
-	public static boolean getflag6() {
-		return flag6;
-	}
-	
 
 	
 	static {
@@ -51,17 +47,6 @@ public class UserFun {
 		
 	}
 	
-	public static void add(String username,String email,String password,String userlevel ,int userphone, String useraddress ) {
-
-		User user = new User();
-		user.setUsername(username);
-		user.setEmail(email);
-		user.setPassword(password);
-		user.setUserlevel(userlevel);
-		user.setUserphone(userphone);
-		user.setUseraddress(useraddress);
-		userList.add(user);
-	}
 	
 	public boolean login(String email, String password) {
 		for (User user : userList) {
@@ -90,20 +75,6 @@ public class UserFun {
 		    }
 		}
 		return 0;
-	}
- 
-	public static User getemail1(String email) {
-		
-		for (User user : userList) {
-		
-			if ( email.equals(user.getEmail())) {
-			
-			return user;
-
-		}
-	
-		}
-		return null;
 	}
 	
 public String getusername1(String email) {
