@@ -25,8 +25,7 @@ public class userSignupTest {
 	 private String password;
 	 private String username;
 	 private String userlevel;
-	 private boolean l;
-	 
+	 private boolean l;	 
 	 @Given("the usear is already logged in")
 	 public void the_usear_is_already_logged_in() {
 		   System.out.println("..");
