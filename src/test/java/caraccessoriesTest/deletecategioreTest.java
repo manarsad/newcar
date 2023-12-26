@@ -13,7 +13,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class deleteCategioreTest {
+public class deletecategioreTest {
 	private Product product = new Product();
     private static ProductFun productfun = new ProductFun();
 
