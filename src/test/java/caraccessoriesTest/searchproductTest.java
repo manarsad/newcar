@@ -35,7 +35,9 @@ public class searchproductTest {
 	}
 	@Then("{int} product should have been found with name {string}")
 	public void product_should_have_been_found_with_name(Integer int1, String string) {
-		assertTrue(ProductFun.getflag5()==true);
+	    assertEquals(true,ProductFun.getflag5());
+
+		//assertTrue(ProductFun.getflag5()==true);
 
 	   //  assertTrue(productfun.getproductname1(string)!=null);		
 		
