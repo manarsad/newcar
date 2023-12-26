@@ -13,8 +13,8 @@ public class InstallerFun {
 	
 	static {
 		Installer installer1 = new Installer("ali","ali@gmail.com", "Sunday","14-April",12);
-		Installer installer2 = new Installer("ali1","ali@gmail.com", "Monday","14-Jun",2);
-		Installer installer3 = new Installer("ali2","ali@gmail.com", "Monday","14-May",4);
+		Installer installer2 = new Installer("ali1","ali1@gmail.com", "Monday","14-Jun",2);
+		Installer installer3 = new Installer("ali2","ali2@gmail.com", "Monday","14-May",4);
 		installerList.add(installer1);
 		installerList.add(installer2);
 		installerList.add(installer3);
