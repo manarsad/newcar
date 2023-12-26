@@ -5,7 +5,6 @@ When delete a product with productcategiore "Electronic"
 Then I will found the product with productcategiore as "Electronic"
 
 
-
 Scenario: delete a product when the admin is not logged in
 Given the admin not logged in
 When I try to delete a product with productcategiore "Electr" 
