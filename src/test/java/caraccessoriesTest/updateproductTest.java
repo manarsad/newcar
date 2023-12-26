@@ -1,5 +1,6 @@
 package caraccessoriesTest;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -7,6 +8,7 @@ import java.util.List;
 
 import caraccessories.Product;
 import caraccessories.ProductFun;
+import caraccessories.UserFun;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -41,9 +43,9 @@ public class updateproductTest {
 		}
 	@Then("I will found the product with a  productid {int}")
 	public void i_will_found_the_product_with_productid(Integer int1) {
-		assertTrue(ProductFun.getflag6()==true);
+	    assertEquals(true,ProductFun.getflag6());
 
-		// assertFalse(productfun.getproductid1(int1)!=null);	
+		//assertTrue(ProductFun.getflag6()==true);
 		 productfun.printProductList();
 
 //		 for (Product product : result) {
@@ -65,7 +67,9 @@ public class updateproductTest {
 	}
 	@Then("I can't found the product with a productid {int}")
 	public void i_can_t_found_the_product_with_a_productid(Integer int1) {
-		assertTrue(ProductFun.getflag4()==false);
+	    assertEquals(false,ProductFun.getflag4());
+
+		//assertTrue(ProductFun.getflag4()==false);
 
 		//assertFalse(productfun.getproductid1(int1)!=null);		
 		System.out.println("this product is not exist");
