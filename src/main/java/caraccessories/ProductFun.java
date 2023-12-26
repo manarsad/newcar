@@ -5,7 +5,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 public class ProductFun {
 	static Logger logger = Logger.getLogger(ProductFun.class.getName());
 	private static List<Product> productList = new ArrayList<>();
@@ -211,7 +210,6 @@ public class ProductFun {
         return orderList.isEmpty();
     }
 
-	
 	
 	
 	public static void printOrderList() {
