@@ -67,8 +67,7 @@ public class User {
           this.userlevel = userlevel ; 
           this.userphone = userphone;
           this.useraddress = useraddress;
-
-          
+       
    }
    @Override
    public String toString() {
