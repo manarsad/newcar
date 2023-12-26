@@ -5,7 +5,6 @@ When update a user with a  with username "manar" and email 'user5@gmail.com' and
 Then I will found the user with a  useremail 'user5@gmail.com'
 
 
-
 Scenario: update a user when admin is not logged in
 Given admin not logged in
 When I try to update a user with a  with username "manar" and email 'mmm@gmail.com' and password 'manar' and userlevel 'ADMIN' and userphone 12345 and useraddress "jenin" oldemail "mmm@gmail.com"
