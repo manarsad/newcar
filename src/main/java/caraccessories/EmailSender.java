@@ -1,6 +1,7 @@
 package caraccessories;
 
 import java.util.Properties;
+import java.util.logging.Level;
 
 import javax.mail.Authenticator;
 import javax.mail.Message;
@@ -11,12 +12,17 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-//import com.google.api.services.gmail.model.Message;
+import static caraccessories.ProductFun.logger;
+
 
 public class EmailSender {
-	private static boolean isSented=false;
-	
-	public static boolean isSented() {
+	private static boolean isSented;
+
+    static {
+        isSented = false;
+    }
+
+    public static boolean isSented() {
 		return isSented;
 	}
 	
@@ -32,30 +38,31 @@ public class EmailSender {
 	        // Create a session with the properties
 	        Session session = Session.getDefaultInstance(properties, new Authenticator() {
 	            protected PasswordAuthentication getPasswordAuthentication() {
-	                return new PasswordAuthentication("s12027821@stu.najah.edu", "nseewneyladintsu");
+	                return new PasswordAuthentication("s12027821@stu.najah.edu", "pkxf qoxm czzv zknz");
 	            }
 	        });
-	      //  });
+	    
 
-	            // Create a MimeMessage object
+	            
 	            MimeMessage message = new MimeMessage(session);
 
-	            // Set the sender and recipient addresses
+	           
 	            message.setFrom(new InternetAddress(from));
 	            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
-	            // Set the subject and text of the email
+	        
 	            message.setSubject(subject);
 	            message.setText(messageText);
 
-	            // Send the email
+	          
 	            Transport.send(message);
-		    System.out.println("Email sent successfully.");
+			   logger.log(Level.INFO, "Email sent successfully. \n");
+	          
 	        } 
 	 catch (MessagingException e) {
 	            e.printStackTrace();
-	        }
-	    }
+	        }
+	    }
 	
 
 }
