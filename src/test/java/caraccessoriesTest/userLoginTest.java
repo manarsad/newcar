@@ -1,9 +1,11 @@
 package caraccessoriesTest;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import org.junit.Assert;
 
+import caraccessories.ProductFun;
 import caraccessories.User;
 import caraccessories.UserFun;
 import caraccessories.firstclass;
@@ -38,7 +40,9 @@ public class userLoginTest {
 	
 	@Then("the user will login")
 	public void the_user_will_login() {
-		assertTrue(UserFun.getflag4()==true);
+	    assertEquals(true, UserFun.getflag4());
+
+	//	assertTrue(UserFun.getflag4()==true);
 
 //		assertTrue(b);
 		Assert.assertTrue(b);
@@ -46,7 +50,9 @@ public class userLoginTest {
 	@Then("the user will not login")
 	public void the_user_will_not_login() {
 //		assertFalse(b);
-		assertTrue(UserFun.getflag4()==false);
+	    assertEquals(false, UserFun.getflag4());
+
+		//assertTrue(UserFun.getflag4()==false);
 
 		Assert.assertFalse(b);
         logger.log(Level.INFO, "try again please\\n");
