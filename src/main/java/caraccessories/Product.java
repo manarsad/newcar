@@ -25,8 +25,7 @@ public class Product {
 	}
 	public void setProductid(int productid) {
 		this.productid = productid;
-	}
-    
+	}   
 
 	public String getProductname() {
 		return productname;
@@ -98,14 +97,6 @@ public class Product {
                 ", productavailability='" + productavailability + '\'' +
                 '}';
     }
-		
-	
-
-
-
-		
-	
-	
 	}
 	
 

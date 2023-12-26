@@ -52,8 +52,6 @@ public class firstclass {
 	public static void function1() throws IOException
 	{
 		while(true) {
-			
-		
         logger.log(Level.INFO, "Welcome to our Car accessories company. \n");
         logger.log(Level.INFO, "Please choose from the list \n"
         		+ "1. Sign Up \n"
@@ -458,7 +456,7 @@ public class firstclass {
 				                System.out.println("User not found for update.\n");
 				                continue;
 				            }
-			        }
+			        } 
 			        else if (input2 == 4 )
 			        {
 			        	// request installation aervice's
@@ -470,7 +468,7 @@ public class firstclass {
 			        	installerfun.printInstallerList();
 			        	logger.log(Level.INFO, "\n Please choose installation requset number \n ");
 			        	int requestnumber=scanner.nextInt();   	
-			        	/// return appointment 
+			        	/// return appointment
 			        	String installername = installerfun.getinstallername1(requestnumber);
 			        	String installerday = installerfun.getinstallerday1(requestnumber);
 			        	String installermonth = installerfun.getinstallermonth1(requestnumber);
@@ -557,6 +555,7 @@ public class firstclass {
 		    }   
 		}
 	}
+	
 
 public static void main(String[] args) throws IOException  
 {

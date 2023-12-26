@@ -7,8 +7,6 @@ import org.junit.Assert;
 
 import caraccessories.Product;
 import caraccessories.ProductFun;
-import caraccessories.User;
-import caraccessories.mydata;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

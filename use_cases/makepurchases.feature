@@ -1,6 +1,6 @@
 Feature: Make purchases product
 Scenario: purchase a product when the admin is logged in
-Given the admin is already logged in  
+Given the customer is already logged in with email 'sama@gmail.com' and password 'sama'  
 When purchase a product with product id 11
 Then I will found the product with product id as 11
 

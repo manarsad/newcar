@@ -1,13 +1,15 @@
 package caraccessories;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ProductFun {
-	static Logger logger = Logger.getLogger(firstclass.class.getName());
-	private static List<Product> productList = new ArrayList<Product>();
-	private static List<Product> orderList = new ArrayList<Product>();
+	static Logger logger = Logger.getLogger(ProductFun.class.getName());
+	private static List<Product> productList = new ArrayList<>();
+	private static List<Product> orderList = new ArrayList<>();
 	private static boolean flag1 = false;
 	private static boolean flag2 = false;
 	private static boolean flag3 = false;
@@ -65,20 +67,19 @@ public class ProductFun {
 		
 	}
 		
-	public List<Product> addproduct(int productid , String productname, String productdescription, String productcategorie, int productprice,
+	public static List<Product> addproduct(int productid , String productname, String productdescription, String productcategorie, int productprice,
 	String productimage, String productavailability){
 		
 		for (Product product : productList) {
             if (product.getProductid() == productid) {
-                System.out.println("This Product already exists.");
-                return null; 
+      	       logger.log(Level.INFO, "This Product already exists.");
+                return Collections.emptyList();
             }
         }
 		
 		String productnamelower = productname.toLowerCase();
 		String productdescriptionlower = productdescription.toLowerCase();
 		String productcategorielower = productcategorie.toLowerCase();
-		//String productpricelower = productname.toLowerCase();
 		String productimagelower = productimage.toLowerCase();
 		String productavailabilitylower = productavailability.toLowerCase();
 		productList.add(new Product (productid, productnamelower,productdescriptionlower,productcategorielower,productprice,
@@ -86,21 +87,6 @@ public class ProductFun {
 		flag1=true; 
 		return productList;
 	}
-	
-	
-//	public static Product getproductid1(int productid) {
-//		
-//		for (Product product : productList) {
-//		
-//			if ( productid == product.getProductid()) {
-//			
-//			return product;
-//
-//		}
-//	
-//		}
-//		return null;
-//	}
 	
 	
 	public String getproductname1(int productid) {
@@ -112,21 +98,21 @@ public class ProductFun {
 			return productname;
 			}
 		}
-		System.out.println("This Product already does not exists.");
+        logger.info("This Product already does not exists.");
 		return null;
 	}
 	
 	
-	public void printProductList() {
-        System.out.println("Product List:");
+	public static void printProductList() {
+        logger.info("Product List:");
         for (Product product : productList) {
-            System.out.println(product);
+            logger.info(product.toString());
         }
         flag7=true;
     }
 	
 	
-	public boolean deleteproduct (int productid){
+	public static boolean deleteproduct (int productid){
 		for (Product product : productList) {
             if (product.getProductid() == productid) {
             	productList.remove (product);
@@ -135,13 +121,12 @@ public class ProductFun {
             }
          
         }
-        System.out.println("This Product already not exist.");
+        logger.info("This Product already not exist.");
 		return false;
 		
 	}
 	
-	
-	public boolean deletecategorie (String productcategorie){
+	public static boolean deletecategorie (String productcategorie){
 		for (Product product : productList) {
             if ( productcategorie.equals(product.getProductcategorie()) ) {
             	productList.remove (product);
@@ -150,28 +135,14 @@ public class ProductFun {
             }
          
         }
-        System.out.println("This Product already not exist.");
+        logger.info("This Product already not exist.");
         flag2=false;
 		return false;
 		
 	}
 	
-public static Product getproductcategiore1(String productcategiore) {
-		
-		for (Product product : productList) {
-		
-			if ( productcategiore.equals(product.getProductcategorie())) {
-			
-			return product;
-
-		}
-	
-		}
-		return null;
-	}
-	
-	public List<Product> searchProduct(String productname) {
-        List<Product> matchingProducts = new ArrayList<Product>();
+	public static List<Product> searchProduct(String productname) {
+        List<Product> matchingProducts = new ArrayList<>();
 
         for (Product product : productList) {
             if (productname.equals(product.getProductname())) {
@@ -183,7 +154,7 @@ public static Product getproductcategiore1(String productcategiore) {
         return matchingProducts.isEmpty() ? null : matchingProducts;
     }
 		
-	public List<Product> updateProduct(int productid, String newProductName, String newProductDescription, String newProductCategorie,
+	public static List<Product> updateProduct(int productid, String newProductName, String newProductDescription, String newProductCategorie,
             int newProductPrice, String newProductImage, String newProductAvailability ,int oldproductid) {
 		for (Product product : productList) {
 			if (product.getProductid() == oldproductid) {
@@ -198,11 +169,11 @@ public static Product getproductcategiore1(String productcategiore) {
 			return productList; 
 			}
 			}
-		return null;
+		return Collections.emptyList();
 		}
 	
 	
-	public List<Product> makepurchases(int productid) {
+	public static List<Product> makepurchases(int productid) {
 	    // Check if the product exists in the productList
 	    boolean productExists = false;
 	    for (Product product : productList) {
@@ -213,9 +184,9 @@ public static Product getproductcategiore1(String productcategiore) {
 	    }
 
 	    if (!productExists) {
-	        System.out.println("This Product does not exist.");
+	        logger.info("This Product does not exist.");
 	        flag4=false;
-	        return null;
+	        return Collections.emptyList();
 	    }
 
 	    // If the product exists, add it to the orderList
@@ -225,26 +196,17 @@ public static Product getproductcategiore1(String productcategiore) {
 	                    product.getProductcategorie(), product.getProductprice(), product.getProductimage(),
 	                    product.getProductavailability()));
 	            flag4=true;
-		        System.out.println("done .. add it to order list ");
+	            logger.info("done .. add it to order list ");
 		        sendOrderConfirmationEmail(product.getProductname(), product.getProductprice());
 	            return orderList;
 	        }
 	    }
 
 	    // This part will only be reached if there's an issue with the loops
-	    return null;
+	    return Collections.emptyList();
 	}
 	
-	public boolean getorderlist1() {
-		
-		for (Product product : orderList) {
-			if ( orderList==null) {
-		        System.out.println(" order list is empty ");
-			return false;
-		}
-		}
-		return true;
-	}
+
 	public static boolean isOrderListEmpty() {
         return orderList.isEmpty();
     }
@@ -252,10 +214,10 @@ public static Product getproductcategiore1(String productcategiore) {
 	
 	
 	
-	public void printOrderList() {
-        System.out.println("Order List:");
+	public static void printOrderList() {
+        logger.info("Order List:");
         for (Product product : orderList) {
-            System.out.println(product);
+            logger.info(product.toString());
         }
     }
 	

@@ -8,7 +8,6 @@ import java.util.List;
 
 import caraccessories.Product;
 import caraccessories.ProductFun;
-import caraccessories.mydata;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

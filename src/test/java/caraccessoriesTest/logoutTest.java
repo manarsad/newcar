@@ -12,7 +12,6 @@ import caraccessories.ProductFun;
 import caraccessories.User;
 import caraccessories.UserFun;
 import caraccessories.firstclass;
-import caraccessories.mydata;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
