@@ -156,20 +156,20 @@ public class ProductFun {
 		
 	}
 	
-public static Product getproductcategiore1(String productcategiore) {
-		
-		for (Product product : productList) {
-		
-			if ( productcategiore.equals(product.getProductcategorie())) {
-			
-			return product;
-
-		}
-	
-		}
-		return null;
-	}
-	
+//public static Product getproductcategiore1(String productcategiore) {
+//		
+//		for (Product product : productList) {
+//		
+//			if ( productcategiore.equals(product.getProductcategorie())) {
+//			
+//			return product;
+//
+//		}
+//	
+//		}
+//		return null;
+//	}
+//	
 	public List<Product> searchProduct(String productname) {
         List<Product> matchingProducts = new ArrayList<Product>();
 
@@ -235,16 +235,16 @@ public static Product getproductcategiore1(String productcategiore) {
 	    return null;
 	}
 	
-	public boolean getorderlist1() {
-		
-		for (Product product : orderList) {
-			if ( orderList==null) {
-		        System.out.println(" order list is empty ");
-			return false;
-		}
-		}
-		return true;
-	}
+//	public boolean getorderlist1() {
+//		
+//		for (Product product : orderList) {
+//			if ( orderList==null) {
+//		        System.out.println(" order list is empty ");
+//			return false;
+//		}
+//		}
+//		return true;
+//	}
 	public static boolean isOrderListEmpty() {
         return orderList.isEmpty();
     }
