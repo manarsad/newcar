@@ -23,8 +23,7 @@ public class updateuser {
 		 private String username;
 		 private String userlevel;
 		 private boolean l;
-		 
-		 
+		 		 
 //			@Given("admin is already logged in")
 //			public void the_admin_is_already_logged_in() {
 //				System.out.println("..");
