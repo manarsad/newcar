@@ -33,7 +33,7 @@ public class EmailSender {
 	        Session session = Session.getInstance(properties, new Authenticator() {
 	            @Override
 	            protected PasswordAuthentication getPasswordAuthentication() {
-	                return new PasswordAuthentication("s12027821@stu.najah.edu", "pkxf qoxm czzv zknz");
+	                return new PasswordAuthentication("s12027821@stu.najah.edu", "larw aldf xdyf ihbo");
 	            } 
 	        });
 
